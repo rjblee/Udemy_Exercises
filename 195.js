@@ -5,6 +5,8 @@ var colorDisplay = document.getElementById("colorDisplay");
 var correct = document.getElementById("correct");
 var h1 = document.querySelector("h1");
 var resetButton = document.querySelector("#reset");
+var easyButton = document.querySelector("#easyButton")
+var hardButton = document.querySelector("#hardButton")
 
 resetButton.addEventListener("click", function() {
   colors = generateRandomColors(6);
@@ -19,6 +21,35 @@ resetButton.addEventListener("click", function() {
     squares[i].style.background = colors[i];
   }
 })
+
+easyButton.addEventListener("click", function() {
+  easyButton.classList.add("selected");
+  hardButton.classList.remove("selected");
+  colors = generateRandomColors(3);
+  pickedColor = pickColor();
+  colorDisplay.textContent = pickedColor;
+  
+  for (var i = 0; i < squares.length; i++) {
+    if(colors[i]){
+      squares[i].style.background = colors[i];
+    } else {
+      squares[i].style.display = "none";
+    }
+  }
+});
+
+hardButton.addEventListener("click", function() {
+  hardButton.classList.add("selected");
+  easyButton.classList.remove("selected");
+  pickedColor = pickColor();
+  colors = generateRandomColors(6);
+  for (var i = 0; i < squares.length; i++) {
+    squares[i].style.background = colors[i];
+    squares[i].style.display = "block";
+
+  }
+
+});
 
 colorDisplay.textContent = pickedColor;
 
