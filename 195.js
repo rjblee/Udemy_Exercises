@@ -12,7 +12,7 @@ resetButton.addEventListener("click", function() {
   colors = generateRandomColors(6);
   pickedColor = pickColor();
   colorDisplay.textContent = pickedColor;
-  h1.style.backgroundColor = "grey";
+  h1.style.backgroundColor = "steelblue";
   correct.textContent = "";
   resetButton.textContent = "New Colors";
   

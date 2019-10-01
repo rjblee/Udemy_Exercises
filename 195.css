@@ -1,5 +1,6 @@
 body {
   background-color: grey;
+  margin: 0;
 }
 
 .square {
@@ -24,4 +25,11 @@ body {
 
 .selected {
   background: blue;
+}
+
+h1 {
+  text-align: center;
+  background: steelblue;
+  margin: 0;
+  height: 100px;
 }
