@@ -19,8 +19,17 @@ var blogSchema = new mongoose.Schema({
 
 var Blog = mongoose.model("Blog", blogSchema);
 
+// Blog.create({
+//   title: "Test Blog",
+//   body: "HELLO THIS IS A BLOG"
+// });
 
 // RESTful Routes
+
+app.get("/blogs", function(req, res){
+  res.render("index");
+});
+
 app.listen(3000, function(){
   console.log("Server is running");
 })
