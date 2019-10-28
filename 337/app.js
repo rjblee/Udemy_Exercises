@@ -50,6 +50,7 @@ app.post("/register", function(req, res){
   res.send("REGISTER POST ROUTE");
 })
 
+
 app.listen(3000, function(){
   console.log("Server started..........!");
 })
